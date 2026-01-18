@@ -372,6 +372,19 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.9;
 }
 
+.inline-link {
+    color: var(--accent-gold);
+    text-decoration: none;
+    position: relative;
+    transition: var(--transition);
+    border-bottom: 1px solid transparent;
+}
+
+.inline-link:hover {
+    color: var(--accent-amber);
+    border-bottom-color: var(--accent-amber);
+}
+
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
