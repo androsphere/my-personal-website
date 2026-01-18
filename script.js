@@ -83,10 +83,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // ==================== TYPING EFFECT FOR HERO TITLE ====================
 const heroTitle = document.getElementById('heroTitle');
 const titles = [
-    'Full Stack Developer',
-    'UI/UX Designer',
-    'Problem Solver',
-    'Creative Thinker'
+    'Audio Engineer',
+    'Broadcast Engineer',
+    'Live Sound Specialist',
+    'Recording Artist'
 ];
 
 let titleIndex = 0;
