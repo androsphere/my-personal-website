@@ -202,30 +202,6 @@ backToTop.addEventListener('click', () => {
     });
 });
 
-// ==================== CONTACT FORM HANDLING ====================
-const contactForm = document.getElementById('contactForm');
-
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    // Get form values
-    const formData = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        subject: document.getElementById('subject').value,
-        message: document.getElementById('message').value
-    };
-
-    // Log form data (in production, send to server)
-    console.log('Form submitted:', formData);
-
-    // Show success message
-    alert('Thank you for your message! I will get back to you soon.');
-
-    // Reset form
-    contactForm.reset();
-});
-
 // ==================== PARALLAX EFFECT FOR HERO ====================
 const hero = document.querySelector('.hero');
 
