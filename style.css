@@ -543,8 +543,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .stats-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
     margin-top: 2.5rem;
     justify-content: center;
@@ -559,6 +559,8 @@ h1, h2, h3, h4, h5, h6 {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
     position: relative;
+    flex: 0 1 calc(33.333% - 1.5rem);
+    min-width: 250px;
 }
 
 .stat-item::before {
@@ -623,8 +625,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
     margin-top: 3rem;
     justify-content: center;
@@ -639,6 +641,9 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     position: relative;
     overflow: hidden;
+    flex: 0 1 calc(25% - 1.5rem);
+    min-width: 280px;
+    max-width: 350px;
 }
 
 .skill-category::before {
@@ -726,8 +731,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 2.5rem;
     margin-top: 3rem;
     justify-content: center;
@@ -740,6 +745,9 @@ h1, h2, h3, h4, h5, h6 {
     border: 1px solid var(--border-color);
     transition: all 0.4s ease;
     position: relative;
+    flex: 0 1 calc(33.333% - 2rem);
+    min-width: 350px;
+    max-width: 450px;
 }
 
 .project-card::after {
@@ -1148,8 +1156,9 @@ h1, h2, h3, h4, h5, h6 {
         text-align: center;
     }
 
-    .stats-grid {
-        grid-template-columns: 1fr;
+    .stat-item {
+        flex: 1 1 100%;
+        max-width: 100%;
     }
 
     .contact-wrapper {
@@ -1186,11 +1195,13 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 6rem;
     }
 
-    .projects-grid {
-        grid-template-columns: 1fr;
+    .project-card {
+        flex: 1 1 100%;
+        max-width: 100%;
     }
 
-    .skills-grid {
-        grid-template-columns: 1fr;
+    .skill-category {
+        flex: 1 1 100%;
+        max-width: 100%;
     }
 }
