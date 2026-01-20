@@ -877,6 +877,13 @@ h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
     border: 1px solid var(--border-color);
     box-shadow: var(--shadow-md);
+    transform: none !important;
+    transition: none !important;
+}
+
+.video-container:hover {
+    transform: none !important;
+    box-shadow: var(--shadow-md);
 }
 
 .video-container iframe {
@@ -886,6 +893,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     height: 100%;
     border: none;
+    pointer-events: auto;
 }
 
 /* ===== CONTACT SECTION ===== */
