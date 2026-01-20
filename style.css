@@ -879,11 +879,26 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: var(--shadow-md);
     transform: none !important;
     transition: none !important;
+    animation: none !important;
+    will-change: auto !important;
 }
 
 .video-container:hover {
     transform: none !important;
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--shadow-md) !important;
+    animation: none !important;
+    scale: 1 !important;
+    translate: 0 0 !important;
+}
+
+.video-container *,
+.video-container *:hover {
+    animation: none !important;
+}
+
+.video-container::before,
+.video-container::after {
+    display: none !important;
 }
 
 .video-container iframe {

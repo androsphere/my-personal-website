@@ -163,6 +163,7 @@ if (statsGrid) {
 }
 
 // ==================== SCROLL REVEAL ANIMATION ====================
+// Exclude video-container from scroll animations
 const revealElements = document.querySelectorAll('.skill-category, .project-card, .stat-item');
 
 const revealObserver = new IntersectionObserver((entries) => {
@@ -178,10 +179,13 @@ const revealObserver = new IntersectionObserver((entries) => {
 });
 
 revealElements.forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    revealObserver.observe(el);
+    // Skip if element is or contains a video-container
+    if (!el.classList.contains('video-container') && !el.querySelector('.video-container')) {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        revealObserver.observe(el);
+    }
 });
 
 // ==================== BACK TO TOP BUTTON ====================
