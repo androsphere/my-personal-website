@@ -492,6 +492,15 @@ h1, h2, h3, h4, h5, h6 {
     transition: all 0.5s ease;
     animation: gradientShift 6s ease infinite;
     position: relative;
+    overflow: hidden;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
 }
 
 .image-container::before {
